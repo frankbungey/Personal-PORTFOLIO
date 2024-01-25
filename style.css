@@ -1,9 +1,13 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif "poppins";
+    font-family: 'Nunito Sans', sans-serif;
+
 }
 p{
+    font-size: 30px;
+}
+h1{
     font-size: 30px;
 }
 /*heads*/
@@ -30,6 +34,12 @@ p{
     margin: 2rem;
     color: black;
     font-size: 25px;
+    font-weight: 300px;
+    transition: 1s;
+}
+.links a:hover{
+    background: #fff;
+    padding: 0 5px;
 }
 .login-btn{
     background-color: transparent;
@@ -48,66 +58,89 @@ p{
     color:black;
 }
 /*body*/
+
+.first-side-bar{
+    position: fixed;
+    left: 0;
+    width: 25%;
+    z-index: 1;
+    margin-top: 4%;
+    height: 100vh;
+    display: flex;
+}
 h1{
     text-shadow: 0 0 1px #e58282, 0 0 2px #7373e9;
 }
 .projects{
-    padding: 1rem;
+    padding-bottom: 8rem;
     margin-top: 50px; 
     align-items: center;
     justify-content: center;
 }
 .projects button{
+    color:#030303;
+    background: #ffff;
     padding: 1rem 4rem;
     font-size: 20px;
     outline: none;
     cursor: pointer;
     border-radius: 5px;
+    transition: 1s;
+    border: none;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+.projects button:hover{
+    background: rgb(255, 255, 255);
+    color: #000000;
 }
 .body-content{
     background: linear-gradient(45deg , #dddbdb,#fff);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 10rem;
     color:black;
-    flex-basis: 100%;
+    display: grid;
+    grid-template-rows: repeat( 3,auto);
 }
-.body-content{
-    flex-basis: 50%;
+.biz-icons{
+    grid-column: span 3;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.biz-icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 1rem;
+    color: #030303;
+}
+.biz-icons a img{
+    border-radius: 50%;
+  
 }
 .body-text{
-    padding: 2rem;
+    grid-column: span 3;
+    align-items: center;
+    text-align: center;
 }
 .body-img{
-     display: flex;
-    flex-basis: 50%;
+    grid-column: span 3;
+    align-items: center;
+
 }
 .body-img img{
-    background-position: cover;
-    background-size: contain;
-    height: 60rem;
-    border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.2);
-}
-.dec1{
     border-radius: 50%;
+    padding: 2rem 1rem;
+    margin-top: 2%;
+    display: flex;
+    margin-left: 20%;
 }
-.dec1 ,.dec2{
-    background-color: rgb(72, 214, 72);
-    padding: 10px 18px;
-    position: relative;
-    animation-name: my-move;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-}
-@keyframes my-move{
-    0%   {background-color:rgb(97, 255, 97); left:0px; top:0px;}
-    50%  {background-color:rgb(9, 222, 255); left:200px; top:0px;}
-    
-}
+
+
 /* cards */
+.center-elements{
+    margin-left: 22%;
+    padding: 5rem 5rem;
+}
 .intro{
     color: black;
     grid-column: span 6;
@@ -117,33 +150,49 @@ h1{
 .cards{
     display: grid;
     gap: 2rem;
-    padding: 3rem;
+    padding: 2rem 10rem;
     grid-template-columns: repeat(6,auto);
-    background: linear-gradient(45deg,#fff);
+    background: #dddbdb;
 }
 .card-js{
-    grid-column: span 2;
+    grid-column: span 4;
 }
-.card-js img{
+.card-js .img{
     position: relative;
-    left: 50%;
+    left: 10%;
 }
-.card,.card-js{
-    background-color: rgb(0, 0, 0);
-    height: 400px;
+.card-react{
+    grid-column: span 3;
+}
+.card-react .img{
+    position:relative;
+    left: 15%;
+}
+.card-py{
+    grid-column: span 3;
+}
+.card-py .img{
+    position:relative;
+    left: 10%;
+}
+.card,.card-js,.card-react,.card-py{
+    background-color: rgb(255, 255, 255);
+    height: 300px;
     border-radius: 5px;
+    padding: 1px 3px;
     transition: 1s;
-    color: #fff;
+    color: #000000;
+    box-shadow: 0 0 5px 5px rgba(78, 78, 78, 0.2);
 }
 .card-js:hover{
-    padding: 10px 30px;
+    padding: 5px 20px;
     opacity: 0.8;
     border-radius: none;
 
 }
 .card:hover{
     opacity: 0.8;
-    padding: 10px 40px;
+    padding: 5px 10px;
     border-radius: none;
 }
 .img img{
@@ -164,21 +213,83 @@ h1{
 }
 /* about */
 .about-me{
-    height: 80vh;
     padding: 1rem 4rem;
     background: #dddbdb;
     display: flex;
-    flex-basis: 100%;
-}
-.about-img{
-    flex-basis: 50%;
-
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem 5rem;
 }
 .about-text{
-    flex-basis: 50%;
+    flex-basis: 90%;
     align-items: center;
     justify-content: center;
 
+}
+.gallery{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5,auto);
+    border: 1px solid black;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+
+}
+.gal1{
+    grid-column: span 5;
+    background-color: #dcdbdb;
+    height: none;
+    text-align: center;
+}
+.gal2,.gal3,.gal4,.gal5{
+    height: 200px;
+    width: 150px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 1re 2rem;
+}
+.gal2{
+    background-image: url(/Personal-PORTFOLIO/images/img\ 1.jpg);
+    background-position: center;
+    background-size:cover;
+    transition: 1s;
+}
+.gal2:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 20px 10px rgba(0,0,0,0.2);
+}
+.gal3{
+    background-image: url(/Personal-PORTFOLIO/images/img\ 2.jpg);
+    background-position: center;
+    background-size:cover;
+    transition: 1s;
+}
+.gal3:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 20px 10px rgba(0,0,0,0.2);
+}
+.gal4{
+    background-image: url(/Personal-PORTFOLIO/images/img\ 3.jpg);
+    background-position: center;
+    background-size:cover;
+    transition: 1s;
+}
+.gal4:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 20px 10px rgba(0,0,0,0.2);
+}
+.gal5{
+    background-image: url(/Personal-PORTFOLIO/images/img\ 4.jpg);
+    background-position: center;
+    background-size:cover;
+    transition: 1s;
+}
+.gal5:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 20px 10px rgba(0,0,0,0.2);
 }
 
 
@@ -189,12 +300,35 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 4rem;
-    background: rgb(255, 255, 255);
+    padding: 2rem 10rem;
+    background: #dddbdb;
+}
+.n-img{
+    display: flex;
+    align-items: center
+}
+.normal{
+    display:;
+    
+}
+.normal img{
+    margin: 5px;
+
 }
 .find-me img{
    border-radius: 50%;
 }
 .my-socials a{
     text-decoration: none;
+}
+.my-socials a img{
+  
+}
+
+
+/* footer */
+.footer{
+    background: #dddbdb;
+    height: 50vh;
+
 }
