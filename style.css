@@ -71,13 +71,13 @@ h1{
 h1{
     text-shadow: 0 0 1px #e58282, 0 0 2px #7373e9;
 }
-.projects{
-    padding-bottom: 8rem;
-    margin-top: 50px; 
+.projects1{
+    padding-bottom: 20rem;
+    margin-top: 20px; 
     align-items: center;
     justify-content: center;
 }
-.projects button{
+.projects1 button, .projects2 button{
     color:#030303;
     background: #ffff;
     padding: 1rem 4rem;
@@ -89,8 +89,8 @@ h1{
     border: none;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
 }
-.projects button:hover{
-    background: rgb(255, 255, 255);
+.projects1 button:hover , .projects2 button:hover{
+    background: rgb(200, 199, 199);
     color: #000000;
 }
 .body-content{
@@ -138,8 +138,9 @@ h1{
 
 /* cards */
 .center-elements{
-    margin-left: 22%;
-    padding: 5rem 5rem;
+    margin-left: 18%;
+    padding: 5rem 10rem;
+    background: #dddbdb;
 }
 .intro{
     color: black;
@@ -227,6 +228,10 @@ h1{
     justify-content: center;
 
 }
+.about-text1{
+    background-position: center;
+    background-size: cover;
+}
 .gallery{
     display: grid;
     gap: 1rem;
@@ -294,41 +299,102 @@ h1{
 
 
 /* contacts */
-
+.end-nav{
+    margin-top: 2rem;
+    background: #6cd8eb;
+    height: 100vh;
+    position:fixed;
+    color: #fff;
+    right: -280px;
+    width:280px;
+    top: 2rem;
+    transition: 1s;
+}
 .find-me{
-    grid-column: span 2;
-    display: flex;
+    padding: 2rem 2rem;
+}
+.normal .n-img img{
+    border-radius: 50%;
+    margin-top: 1rem;
+}
+.my-socials{
     align-items: center;
-    justify-content: space-around;
-    padding: 2rem 10rem;
-    background: #dddbdb;
-}
-.n-img{
-    display: flex;
-    align-items: center
-}
-.normal{
-    display:;
-    
-}
-.normal img{
-    margin: 5px;
-
-}
-.find-me img{
-   border-radius: 50%;
-}
-.my-socials a{
-    text-decoration: none;
+    justify-content: center;
 }
 .my-socials a img{
-  
+    border-radius: 50%;
+    margin: 1rem;
 }
-
 
 /* footer */
 .footer{
-    background: #dddbdb;
+    background:#dcdbdb;
     height: 50vh;
+}
 
+
+@media only screen and ( max-width: 425px){
+   body{
+    display: flex;
+   }
+   .first-side-bar{
+    width: 100%;
+    height: 110vh;
+   }
+   .center-elements{
+    padding: none;
+    width: 100%;
+    margin-top: 110vh;
+    background: #dddbdb;
+   }
+   /* gallery */
+   .gallery{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(5,auto);
+   }
+   .gal1{
+    grid-column: span 5;
+   }
+   .gal2{
+    grid-column: span 2;
+   } 
+   .gal3{
+    grid-column: span 3;
+   }
+   .gal4{
+    grid-column: span 3;
+   } 
+   .gal5{
+    grid-column: span 2;
+   }
+/* cards */
+   .cards{
+    margin-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(6 , auto);
+   }
+   /* .card{
+    grid-column: span 6;
+   } */
+   .card-js{
+    grid-column: span 6;
+    }
+
+    .card-react{
+        grid-column: span 6;
+    }
+    .card-py{
+        grid-column: span 6;
+    }
+    .card,.card-js,.card-react,.card-py{
+        
+    }
+
+    /* end nav */
+    .end-nav{
+        z-index: 2;
+        margin-top: 3rem;;
+    }
+    
 }
