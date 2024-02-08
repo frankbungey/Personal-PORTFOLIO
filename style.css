@@ -4,6 +4,9 @@
     font-family: 'Nunito Sans', sans-serif;
 
 }
+body{
+    background: #dddbdb;
+}
 p{
     font-size: 30px;
 }
@@ -23,7 +26,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(170, 170, 170);
+    background-color: #6cd8eb;
     height: 5rem;
 }
 .links{
@@ -58,14 +61,19 @@ h1{
     color:black;
 }
 /*body*/
-
+.main-cont{
+    display: flex;
+    padding-top: 5rem;
+}
 .first-side-bar{
+    background: linear-gradient(45deg , #dddbdb,#fff);
     position: fixed;
-    left: 0;
+    /* position: fixed; */
+    /* left: 0; */
     width: 25%;
-    z-index: 1;
-    margin-top: 4%;
-    height: 100vh;
+    /* z-index: 1; */
+    /* margin-top: 4%; */
+    /* height: 100vh; */
     display: flex;
 }
 h1{
@@ -79,7 +87,7 @@ h1{
 }
 .projects1 button, .projects2 button{
     color:#030303;
-    background: #ffff;
+    background: #6cd8eb;
     padding: 1rem 4rem;
     font-size: 20px;
     outline: none;
@@ -94,7 +102,6 @@ h1{
     color: #000000;
 }
 .body-content{
-    background: linear-gradient(45deg , #dddbdb,#fff);
     color:black;
     display: grid;
     grid-template-rows: repeat( 3,auto);
@@ -138,8 +145,10 @@ h1{
 
 /* cards */
 .center-elements{
-    margin-left: 18%;
-    padding: 5rem 10rem;
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    /* padding: 5rem 10rem; */
     background: #dddbdb;
 }
 .intro{
@@ -149,9 +158,10 @@ h1{
     text-align: center;
 }
 .cards{
+    /* /* margin-left: 18%; */
+    padding: 2rem; 
     display: grid;
     gap: 2rem;
-    padding: 2rem 10rem;
     grid-template-columns: repeat(6,auto);
     background: #dddbdb;
 }
@@ -169,12 +179,22 @@ h1{
     position:relative;
     left: 15%;
 }
+.card-react:hover{
+    padding: 5px 20px;
+    opacity: 0.8;
+    border-radius: none;  
+}
 .card-py{
     grid-column: span 3;
 }
 .card-py .img{
     position:relative;
     left: 10%;
+}
+.card-py:hover{
+    padding: 5px 20px;
+    opacity: 0.8;
+    border-radius: none;
 }
 .card,.card-js,.card-react,.card-py{
     background-color: rgb(255, 255, 255);
@@ -214,13 +234,12 @@ h1{
 }
 /* about */
 .about-me{
-    padding: 1rem 4rem;
+    /* /* margin-left: 18%; */
     background: #dddbdb;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 2rem 5rem;
 }
 .about-text{
     flex-basis: 90%;
@@ -333,20 +352,52 @@ h1{
 }
 
 
-@media only screen and ( max-width: 425px){
+@media only screen and ( max-width: 600px){
    body{
-    display: flex;
+    width: 100%;
+   }
+   /* main container */
+   .main-cont{
+    flex-direction: column;
+   }
+   header{
+    position: relative;
+    top: 0;
+    z-index: 2;
+   }
+   .links{
+    display:none;
    }
    .first-side-bar{
-    width: 100%;
-    height: 110vh;
+    position: static ;
+   width: 100%;
+   height: auto;
    }
-   .center-elements{
-    padding: none;
+    .body-content{
     width: 100%;
-    margin-top: 110vh;
-    background: #dddbdb;
    }
+   .first-side-bar img{
+    margin-left: 10%;
+    margin-top: 2rem;
+   }
+   .projects1{
+    padding-top: 5rem;
+   }
+   .body-text{
+    width: 100%;
+   }
+   /* center elements */
+    .center-elements{
+        position:static;
+        left: 0;
+        width: 100%;
+        
+    }
+   .about-me{
+   width: 100%;
+   padding: 0 1rem;
+   }
+   
    /* gallery */
    .gallery{
     display: grid;
@@ -370,27 +421,21 @@ h1{
    }
 /* cards */
    .cards{
-    margin-left: 1rem;
     display: grid;
-    grid-template-columns: repeat(6 , auto);
+    grid-template-columns: repeat(5,auto);
    }
-   /* .card{
-    grid-column: span 6;
-   } */
+   .card{
+    grid-column: span 5;
+   }
    .card-js{
-    grid-column: span 6;
-    }
-
-    .card-react{
-        grid-column: span 6;
-    }
-    .card-py{
-        grid-column: span 6;
-    }
-    .card,.card-js,.card-react,.card-py{
-        
-    }
-
+    grid-column: span 5;
+   }
+   .card-react{
+    grid-column: span 5;
+   }
+   .card-py{
+    grid-column: span 5;
+   }
     /* end nav */
     .end-nav{
         z-index: 2;
