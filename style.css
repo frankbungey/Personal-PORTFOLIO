@@ -45,7 +45,7 @@ h1{
     padding: 0 5px;
 }
 .login-btn{
-    background-color: transparent;
+    background-color: linear-gradient(45deg , #dddbdb,#fff);
     padding: 1rem 2rem;
     color:black;
     outline: none;
@@ -57,7 +57,7 @@ h1{
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .login-btn:hover{
-    background-color: rgb(7, 158, 252);
+    background-color: transparent;
     color:black;
 }
 /*body*/
@@ -71,16 +71,17 @@ h1{
     /* position: fixed; */
     /* left: 0; */
     width: 25%;
+
     /* z-index: 1; */
     /* margin-top: 4%; */
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
 }
 h1{
     text-shadow: 0 0 1px #e58282, 0 0 2px #7373e9;
 }
 .projects1{
-    padding-bottom: 20rem;
+    padding-bottom: 5rem;
     margin-top: 20px; 
     align-items: center;
     justify-content: center;
@@ -360,18 +361,14 @@ h1{
    .main-cont{
     flex-direction: column;
    }
-   header{
-    position: relative;
-    top: 0;
-    z-index: 2;
-   }
+  
    .links{
     display:none;
    }
    .first-side-bar{
     position: static ;
-   width: 100%;
-   height: auto;
+    width: 100%;
+    height:fit-content;
    }
     .body-content{
     width: 100%;
