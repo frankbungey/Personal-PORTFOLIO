@@ -68,7 +68,6 @@ h1{
 .first-side-bar{
     background: linear-gradient(45deg , #dddbdb,#fff);
     position: fixed;
-    /* position: fixed; */
     /* left: 0; */
     width: 25%;
 
@@ -357,6 +356,9 @@ h1{
    h1{
     font-size: 25px;
    }
+   h2{
+    font-size: 20px;
+   }
     p{
     font-size: 20px;
    }
@@ -374,7 +376,7 @@ h1{
    .first-side-bar{
     position: static ;
     width: 100%;
-    height:fit-content;
+    margin-bottom: 4rem;
    }
     .body-content{
     width: 100%;
@@ -396,8 +398,9 @@ h1{
         width: 100%;
         
     }
-    .about-text{
+    .about-text1{
         padding: 0 2rem;
+       
     }
    .about-me{
    width: 100%;
