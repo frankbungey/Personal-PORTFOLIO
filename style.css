@@ -354,7 +354,13 @@ h1{
 
 
 @media only screen and ( max-width: 600px){
-   body{
+   h1{
+    font-size: 25px;
+   }
+    p{
+    font-size: 20px;
+   }
+    body{
     width: 100%;
    }
    /* main container */
@@ -389,6 +395,9 @@ h1{
         left: 0;
         width: 100%;
         
+    }
+    .about-text{
+        padding: 0 2rem;
     }
    .about-me{
    width: 100%;
