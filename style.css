@@ -522,6 +522,11 @@ h1 {
 #messagebtn:hover {
     background: #6cd8eb;
 }
+/* extra page */
+.extra-page{
+    height: 50vh;
+
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -540,6 +545,13 @@ h1 {
 
     body {
         width: 100%;
+    }
+    .btns button{
+        padding: 3px 6px;
+        background: rgb(23, 184, 123);
+        border: none;
+        outline: none;
+        box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
     }
 
     /* main container */
@@ -576,6 +588,7 @@ h1 {
 
     /* center elements */
     .center-elements {
+        margin-top: 7rem;
         position: static;
         left: 0;
         width: 100%;
@@ -675,12 +688,11 @@ h1 {
     }
     .contact-imgs{
         width: 100%;
-        border-radius: 0;
+        /* border-radius: 0; */
         margin-left:1rem;
     }
     .contact-imgs,
     .contWork{
-     margin: 0;
      width: 100%;
     }
     .contact-imgs,
@@ -691,7 +703,6 @@ h1 {
     
     .footer{
         width: 100%;
-        border-radius: 0;
         margin-left:1rem;
 
     }
