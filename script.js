@@ -167,10 +167,11 @@ function throwErrorText() {
 
 // work
 const nameOne = document.getElementById("nameOne")
-const emailOne = document.getElementById("emailOne")
+const emailOne = document.getElementById("emailWork")
 const textWork = document.getElementById("textWork")
+const workBtn = document.getElementById("workbtn");
 
-const validateData = ()=>{
+ workBtn.addEventListener(("click"),()=>{
 
      if(nameOne.value == ""){
         alert("Name Cant Be Empty!");
@@ -184,24 +185,25 @@ const validateData = ()=>{
         alert("Describe Your Work..")
     }
     else{
-        alert("Thank You..\n For Now Click The contact btn to reach me.")
+        alert("Thank You.. For Now Click The contact btn to reach me.")
     }
-    nameOne.value = "";
-    emailOne.value = "";
-    textWork.value = "";
+
+    nameOne.value = ""
+    emailOne.value = ""
+    textWork.value = ""
 
     location.reload();
-};
+});
 
-function throwErrorNameOne() {
+function throwErrorNameOne(){
     nameOne.style.color = "red"
     nameOne.style.border = "2px solid red"
 }
-function throwErrorEmailOne() {
+function throwErrorEmailOne(){
     emailOne.style.color = "red"
     emailOne.style.border = "2px solid red"
 }
-function throwErrorTextWork() {
+function throwErrorTextWork(){
     textWork.style.color = "red"
     textWork.style.border = "2px solid red"
 }

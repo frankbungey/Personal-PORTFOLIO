@@ -50,6 +50,7 @@ h1 {
 
 .logo {
     font-size: 30px;
+    margin-left: 2rem;
 }
 
 .links a:hover {
@@ -527,9 +528,57 @@ h1 {
 /* extra page */
 .extra-page{
     height: 50vh;
-
+    display: grid;
+    grid-template-columns: repeat(7,auto);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+h3{
+     grid-column: span 7;
+     height: 30px;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6{
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    margin: 2rem;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+}
+.icon1{
+    grid-column: span 2;
+    background-image: url(/Personal-PORTFOLIO/images/git.jpg);
+}
+.icon2{
+    grid-column: span 1;
+    background-image: url(/Personal-PORTFOLIO/images/insta.jpg);   
+}
+.icon3{
+    grid-column: span 1;
+   background-image: url(/Personal-PORTFOLIO/images/linked\ in.jpg);    
+}
+.icon4{
+    grid-column: span 1;
+   background-image: url(/Personal-PORTFOLIO/images/twitter.jpg); 
+}
+.icon5{
+    grid-column: span 1;
+   background-image: url(/Personal-PORTFOLIO/images/youtube.jpg);
+}
+.icon6{
+    grid-column: span 1;
+    background-image: url(/Personal-PORTFOLIO/images/myToDo\ Img.jpg);
+ }
 
+
+/* media query */
 
 @media only screen and (max-width: 600px) {
     h1 {
@@ -549,7 +598,8 @@ h1 {
         width: 100%;
     }
     .btns button{
-        padding: 3px 6px;
+        margin-right: 5px;
+        padding: 5px 7px;
         background: rgb(23, 184, 123);
         border: none;
         outline: none;
@@ -716,5 +766,30 @@ h1 {
     .cont form{
         width: 90%;
     }
+
+
+    /* end-nav */
+    .end-nav{
+        height: 100lvh;
+    }
+
+
+    /* extr */
+.extra-page{
+    width: 100%;
+}
+h3{
+    margin-top: 5rem;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4,
+.icon5,
+.icon6{
+    margin: 0.5rem;
+    height: 40px;
+    width: 40px;
+}
 
 }
