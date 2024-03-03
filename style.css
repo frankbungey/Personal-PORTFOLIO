@@ -58,11 +58,13 @@ h1 {
 }
 
 .login-btn {
+    background: rgb(23, 184, 123);
+        border: none;
+        outline: none;
+        box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
     margin-right: 3rem;
-    background: #6cd8eb;
     padding: 1rem 2rem;
     color: #fff;
-    outline: none;
     border-radius: 20px;
     font-size: 20px;
     cursor: pointer;

@@ -131,13 +131,14 @@ const textArea = document.querySelector(".text");
 messageBtn.addEventListener("click", () => {
 if(myName.value == ""){
     throwErrorName();
-    alert('Inputs Cant Be Empty')
+    alert('Name Cant Be Empty')
 }
 else if(myEmail.value == ""){
     throwErrorEmail();
 }
 else if(textArea.value == ""){
     throwErrorText();
+    alert('Please say something ..')
 }
 else{
     alert("Thank You...")
@@ -145,18 +146,62 @@ else{
 myName.value = "";
 myEmail.value = "";
 textArea.value = "";
+
+location.reload();
 });
 
 function throwErrorName() {
-    myName.innerText = "Kindly Provide Your Nmae"
     myName.style.color = "red"
-    myName.style.border = "1px solid red"
+    myName.style.border = "2px solid red"
 }
 function throwErrorEmail() {
     myEmail.style.color = "red"
-    myEmail.style.border = "1px solid red"
+    myEmail.style.border = "2px solid red"
 }
 function throwErrorText() {
    textArea.style.color = "red"
-   textArea.style.border = "1px solid red"
+   textArea.style.border = "2px solid red"
+}
+
+
+
+// work
+const nameOne = document.getElementById("nameOne")
+const emailOne = document.getElementById("emailOne")
+const textWork = document.getElementById("textWork")
+
+const validateData = ()=>{
+
+     if(nameOne.value == ""){
+        alert("Name Cant Be Empty!");
+        throwErrorNameOne()
+     }
+     else if(emailOne.value == ""){
+        throwErrorEmailOne();
+    }
+    else if(textWork.value == ""){
+        throwErrorTextWork();
+        alert("Describe Your Work..")
+    }
+    else{
+        alert("Thank You..\n For Now Click The contact btn to reach me.")
+    }
+    nameOne.value = "";
+    emailOne.value = "";
+    textWork.value = "";
+
+    location.reload();
+};
+
+function throwErrorNameOne() {
+    nameOne.style.color = "red"
+    nameOne.style.border = "2px solid red"
+}
+function throwErrorEmailOne() {
+    emailOne.style.color = "red"
+    emailOne.style.border = "2px solid red"
+}
+function throwErrorTextWork() {
+    textWork.style.color = "red"
+    textWork.style.border = "2px solid red"
 }
