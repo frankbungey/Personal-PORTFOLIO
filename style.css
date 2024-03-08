@@ -120,7 +120,7 @@ h1 {
 
 .projects1 button:hover,
 .projects2 button:hover {
-    background: #6cd8eb;
+    background: #141414;
     color: #fff;
 }
 
@@ -180,10 +180,20 @@ h1 {
 }
 
 .intro {
+    display: flex;
     margin-bottom: 3rem;
-    color: black;
+    justify-content: center;
     align-items: center;
     text-align: center;
+}
+.intro h2{
+    margin-left: 2rem;
+    color:rgb(23, 184, 123);
+    cursor: pointer;
+    transition: 1s;
+}
+.intro h2:hover{
+    color: #141414;
 }
 #card{
     /* padding: 3rem 4rem; */
@@ -259,6 +269,21 @@ h1 {
     width: 80px;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.experience{
+    display: none;
+    text-align: start;
+}
+.education{
+    display: none;
+    text-align: start;
+}
+.education h2{
+   text-align: start;
+   font-size: 30px;
 }
 
 /* about */

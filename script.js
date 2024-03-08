@@ -162,6 +162,32 @@ function throwErrorText() {
    textArea.style.color = "red"
    textArea.style.border = "2px solid red"
 }
+// skill experience education
+const cardSkill = document.querySelector('.cards');
+const cardExperience = document.querySelector('.experience')
+const cardEducation = document.querySelector('.education')
+
+const skillBtn = document.getElementById("skills")
+const experienceBtn = document.getElementById("experience")
+const educationBtn = document.getElementById("education");
+
+skillBtn.addEventListener('click',()=>{
+    cardSkill.style.display = "grid";
+   cardEducation.style.display = "none"
+   cardExperience.style.display = "none"
+});
+
+experienceBtn.addEventListener('click',()=>{
+   cardSkill.style.display = "none";
+   cardEducation.style.display = "none"
+   cardExperience.style.display = "block"
+});
+
+educationBtn.addEventListener('click',()=>{
+    cardSkill.style.display = "none";
+   cardEducation.style.display = "block"
+   cardExperience.style.display = "none"
+});
 
 
 
