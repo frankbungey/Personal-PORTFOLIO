@@ -195,6 +195,15 @@ h1 {
 .intro h2:hover{
     color: #141414;
 }
+.intro h2::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: rgb(23, 184, 123);
+    position: absolute;
+    bottom: -6px;
+    left:0;
+}
 #card{
     /* padding: 3rem 4rem; */
     margin-top: 3rem ;
@@ -281,10 +290,7 @@ h1 {
     display: none;
     text-align: start;
 }
-.education h2{
-   text-align: start;
-   font-size: 30px;
-}
+
 
 /* about */
 .about-me {
