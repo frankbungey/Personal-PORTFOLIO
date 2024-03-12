@@ -177,21 +177,21 @@ skillBtn.addEventListener('click',()=>{
     cardSkill.style.display = "grid";
    cardEducation.style.display = "none"
    cardExperience.style.display = "none"
-   skillBtn.style.textDecoration = "underline"
+   
 });
 
 experienceBtn.addEventListener('click',()=>{
    cardSkill.style.display = "none";
    cardEducation.style.display = "none"
    cardExperience.style.display = "block"
-   experienceBtn.style.textDecoration = "underline"
+  
 });
 
 educationBtn.addEventListener('click',()=>{
     cardSkill.style.display = "none";
    cardEducation.style.display = "block"
    cardExperience.style.display = "none"
-   educationBtn.style.textDecoration = "underline"
+   
 });
 
 
